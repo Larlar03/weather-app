@@ -1,0 +1,87 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Weather</title>
+
+    <!--Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" </head>
+        <body id="background">
+    <!--MOBILE MESSAGE-->
+    <div id="mobile">
+        <div class="mobile-text">
+            <p>View </p>
+            <h1>desktop </h1>
+            <p>version for the full experience.</p>
+        </div>
+    </div>
+
+    <!--DESKTOP SITE-->
+    <main>
+        <!--TOP ROW-->
+        <!--READ ME SECTION-->
+        <div class="readme-container">
+            <div class="popup" onclick="popUp()">
+                <p class="underline">Read Me</p>
+                <span class="popup-text" id="my-popup">
+                    <p>To use this demo, temporarily disable browser secuity protection on Firefox. Or 'insecure
+                        content' in
+                        the 'privacy and security' settings on Chrome.</p>
+                    <!--<img src="img/security.jpg"
+                            alt="Image showing where the user can find the browser security on Mozilla Firefox ">-->
+                </span>
+            </div>
+        </div>
+        <!--ICON SECTION-->
+        <div class="icon-container">
+            <canvas class="icon" width="550" height="550"></canvas>
+        </div>
+
+        <!--BOTTOM ROW-->
+        <!--WEATHER INFORMATION SECTION-->
+        <div class="info-container">
+            <p>It is </p>
+            <h1 class="temperature-description"></h1><br>
+            <p>& </p>
+            <h1 class="temperature-degree">100</h2>
+                <p>&#8451;</p><br>
+                <p>in </p>
+                <h1 class="location-timezone">Timezone</h1>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+    <script src="background.js"></script>
+    <script src="skycons.js"></script>
+
+    <!--Pop up script-->
+    <script>
+        function popUp() {
+            let popup = document.getElementById('my-popup');
+            popup.classList.toggle('show');
+        }
+    </script>
+
+
+    <!--Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+    </script>
+    </body>
+
+</html>
